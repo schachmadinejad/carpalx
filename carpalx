@@ -9,67 +9,20 @@
 // to use, copy to /usr/share/X11/xkb/symbols/carpalx and add the following
 // lines to /usr/share/X11/xkb/symbols.dir:
 //
-//     -dp----- a------- carpalx(qgmlwb)
-//     --p----- a------- carpalx(qgmlwy)
-//     --p----- a------- carpalx(qfmlwy)
-//     --p----- a------- carpalx(qwkrfy)
-//     --p----- a------- carpalx(qwyrfm)
-//     --p----- a------- carpalx(tnwmlc)
+//     -dp----- a------- carpalx(qgmlwy)
 //
 // then load with, e.g.
 //
-//     setxkbmap carpalx                            # defaults to QGMLWB
-//     setxkbmap -layout carpalx -variant qwkrfy    # to select other variants
+//     setxkbmap carpalx                            # defaults to QGMLWY
 
 default
 partial alphanumeric_keys
 xkb_symbols "qgmlwy" {
 
-    include "carpalx(qgmlwb)"
-
-    name[Group1] = "QGMLWY - full optimization, Colemak lettermask, ZXCV like QWERTY";
-
-    key <AD06>	{ [         y,          Y,    y,          Y ]	};
-    key <AD07>	{ [         f,          F,      leftbrace,  rightbrace ]	};
-    key <AD09>	{ [         b,          B, leftbracket, rightbracket ] };
-
-    key <AB04>	{ [         v,          V, pipe, pipe ]	};
-
-};
-
-partial alphanumeric_keys
-xkb_symbols "qgmlwb" {
-
-    include "carpalx(qfmlwy)"
-
-    name[Group1] = "QGMLWB - full optimization, Colemak lettermask";
-
-    key <AD02>	{ [         g,          G,          gbreve,          Gbreve ]	};
-    key <AD06>	{ [         b,          B, leftbracket, rightbracket ] };
-    key <AD07>	{ [         y,          Y,    leftarrow,          yen ]	};
-    key <AD08>	{ [         u,          U,    udiaeresis,      Udiaeresis ]	};
-    key <AD09>	{ [         v,          V, leftdoublequotemark, leftsinglequotemark ]	};
-    key <AD10>	{ [ semicolon,    colon, semicolon, colon ]	};
-
-    key <AC09>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
-    key <AC10>	{ [         h,          H,      leftparenthesis,      rightparenthesis ]	};
-
-    key <AB02>	{ [         x,          X, guillemotright,    greater ]	};
-    key <AB03>	{ [         c,          C,        ccedilla, Ccedilla]	};
-    key <AB04>	{ [         f,          F,      leftbrace,  rightbrace ]	};
-    key <AB05>	{ [         j,          J,         j,         J         ]	};
-    key <AB06>	{ [         k,          K,          k,    K]	};
-    key <AB07>	{ [         p,          P,        section,        section]	};
-
-};
-
-partial alphanumeric_keys
-xkb_symbols "qfmlwy" {
-
     include "latin"
     include "latin(nodeadkeys)"
 
-    name[Group1] = "QFMLWY - full optimization, QWERTY lettermask";
+    name[Group1] = "QGMLWY - full optimization, QWERTY lettermask";
 
     key <AE01>	{ [         1,     1,  onesuperior,   onesuperior ]	};
     key <AE02>	{ [         2,         2,  twosuperior,    twosuperior ]	};
@@ -80,22 +33,23 @@ xkb_symbols "qfmlwy" {
     key <AE07>	{ [         7,  7,    7, 7 ]	};
     key <AE08>	{ [         8,   8,  8,    8 ]	};
     key <AE09>	{ [         9,  9, 9,    9 ]	};
-    key <AE10>	{ [         0, parenright,   braceright,       degree ]	};
+    key <AE10>	{ [         0, 0,   0,       0 ]	};
     key <AE11>	{ [     minus, underscore,    endash, emdash ]	};
     key <AE12>	{ [     equal,       plus, equal,  plus ]	};
 
+    key <TLDE>	{ [     grave, asciitilde,      asciicircum,      asciicircum ]	};
     key <AD01>	{ [         q,          Q,           trademark,  plusminus ]	};
-    key <AD02>	{ [         f,          F,      dstroke,  ordfeminine ]	};
+    key <AD02>	{ [         g,          G,          gbreve,          Gbreve ]	};
     key <AD03>	{ [         m,          M,           degree,    degree ]	};
     key <AD04>	{ [         l,          L,      leftsinglequotemark,      leftdoublequotemark ]	};
     key <AD05>	{ [         w,          W,      rightsinglequotemark,      rightdoublequotemark ]	};
-    key <AD06>	{ [         y,          Y,    leftarrow,          yen ]	};
-    key <AD07>	{ [         u,          U,    udiaeresis,      Udiaeresis ]	};
-    key <AD08>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
-    key <AD09>	{ [         b,          B, rightdoublequotemark, rightsinglequotemark ] };
-    key <AD10>	{ [         j,          J,  guillemotleft, guillemotleft]	};
+    key <AD06>	{ [         y,          Y,    y,          Y ]	};
+    key <AD07>	{ [         f,          F,      braceleft,  braceright ]	};
+    key <AD08>	{ [         u,          U,    udiaeresis,      Udiaeresis ]	};
+    key <AD09>	{ [         b,          B, bracketleft, bracketright ] };
+    key <AD10>	{ [ semicolon,    colon, semicolon, colon ]	};
 
-    key <AC01>	{ [         d,          D,          exclamation_mark,          backslash ]	};
+    key <AC01>	{ [         d,          D,          exclam,          backslash ]	};
     key <AC02>	{ [         s,          S,       ssharp,      ssharp ]	};
     key <AC03>	{ [         t,          T,       ampersand,       dollar  ]	};
     key <AC04>	{ [         n,          N,       at,               hash   ]	};
@@ -103,111 +57,20 @@ xkb_symbols "qfmlwy" {
     key <AC06>	{ [         i,          I,   idotless,     U0130 ]	};
     key <AC07>	{ [         a,          A,           adiaeresis,           Adiaeresis ]	};
     key <AC08>	{ [         e, E, U20AC, U20AC ]	};
-    key <AC09>	{ [         h,          H,      hstroke,      Hstroke ]	};
+    key <AC09>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
+    key <AC10>	{ [         h,          H,      parenleft,      parenright ]	};
     key <AC11>	{ [apostrophe,   quotedbl, apostrophe, quotedbl  ]  };
-    key <TLDE>	{ [     grave, asciitilde,      asciicircum,      asciicircum ]	};
 
     key <AB01>	{ [         z,          Z,scedilla, Scedilla]	};
-    key <AB02>	{ [         v,          V, leftdoublequotemark, leftsinglequotemark ]	};
-    key <AB03>	{ [         g,          G,          gbreve,          Gbreve ]	};
-    key <AB04>	{ [         c,          C,        ccedilla, Ccedilla]	};
-    key <AB05>	{ [         x,          X, guillemotright,    guillemotright ]	};
-    key <AB06>	{ [         p,          P,        thorn,        THORN ]	};
-    key <AB07>	{ [         k,          K,         kra,    ampersand ]	};
+    key <AB02>	{ [         x,          X, guillemotright,    guillemotright ]	};
+    key <AB03>	{ [         c,          C,        ccedilla, Ccedilla]	};
+    key <AB04>	{ [         v,          V, bar, bar ]	};
+    key <AB05>	{ [         j,          J,  guillemotleft, guillemotleft]	};
+    key <AB06>	{ [         k,          K,          k,    K]	};
+    key <AB07>	{ [         p,          P,        section,        section]	};
     key <AB08> {  [         comma, greater, comma, greater]  };
     key <AB09> {  [         period, less, period, less]  };
     key <AB10>	{ [     slash,   question, periodcentered, division ] };
 
     key <CAPS>  { [ ISO_Level3_Latch ] };
-};
-
-partial alphanumeric_keys
-xkb_symbols "qwkrfy" {
-
-    include "latin"
-    include "latin(nodeadkeys)"
-
-    name[Group1] = "QWKRFY - 5 keys swapped wrt. QWERTY";
-
-    key <AD03>	{ [         k,          K,          kra,    ampersand ]	};
-    key <AD05>	{ [         f,          F,      dstroke,  ordfeminine ]	};
-    key <AD09>	{ [         j,          J ]	};
-
-    key <AC01>	{ [         d,          D,          eth,          ETH ]	};
-    key <AC03>	{ [         a,          A,           adiaeresis,           Adiaeresis ]	};
-    key <AC04>	{ [         t,          T,       tslash,       Tslash ]	};
-    key <AC05>	{ [         n,          N ]	};
-    key <AC07>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
-    key <AC08>	{ [         e, E, U20AC, U20AC ]	};
-
-    key <AB06>	{ [         g,          G,          gbreve,          Gbreve ]	};
-
-};
-
-partial alphanumeric_keys
-xkb_symbols "qwyrfm" {
-
-    include "latin"
-    include "latin(nodeadkeys)"
-
-    name[Group1] = "QWYRFM - 10 keys swapped wrt. QWERTY";
-
-    key <AD03>	{ [         y,          Y,    leftarrow,          yen ]	};
-    key <AD05>	{ [         f,          F,      dstroke,  ordfeminine ]	};
-    key <AD06>	{ [         m,          M,           mu,    masculine ]	};
-    key <AD07>	{ [         l,          L,      lstroke,      Lstroke ]	};
-    key <AD08>	{ [         u,          U,    udiaeresis,      Udiaeresis ]	};
-    key <AD09>	{ [         b,          B, rightdoublequotemark, rightsinglequotemark ] };
-
-    key <AC01>	{ [         d,          D,          eth,          ETH ]	};
-    key <AC03>	{ [         a,          A,           adiaeresis,           Adiaeresis ]	};
-    key <AC04>	{ [         t,          T,       tslash,       Tslash ]	};
-    key <AC05>	{ [         n,          N ]	};
-    key <AC07>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
-    key <AC08>	{ [         e, E, U20AC, U20AC ]	};
-    key <AC09>	{ [         i,          I,   idotless,     U0130 ]	};
-
-    key <AB05>	{ [         j,          J ]	};
-    key <AB06>	{ [         g,          G,          gbreve,          Gbreve ]	};
-    key <AB07>	{ [         k,          K,          kra,    ampersand ]	};
-
-};
-
-partial
-xkb_symbols "tnwmlc" {
-
-    include "latin"
-    include "latin(nodeadkeys)"
-
-    name[Group1] = "TNWMLC - worst layout!";
-
-    key <AD01>	{ [         t,          T,       tslash,       Tslash ]	};
-    key <AD02>	{ [         n,          N ]	};
-    key <AD03>	{ [         w,          W,      lstroke,      Lstroke ]	};
-    key <AD04>	{ [         m,          M,           mu,    masculine ]	};
-    key <AD05>	{ [         l,          L,      lstroke,      Lstroke ]	};
-    key <AD06>	{ [         c,          C,        ccedilla, Ccedilla]	};
-    key <AD07>	{ [         b,          B, rightdoublequotemark, rightsinglequotemark ] };
-    key <AD08>	{ [         p,          P,        thorn,        THORN ]	};
-    key <AD09>	{ [         r,          R,    paragraph,   registered ]	};
-    key <AD10>	{ [         h,          H,      hstroke,      Hstroke ]	};
-
-    key <AC01>	{ [         s,          S,       ssharp,      section ]	};
-    key <AC02>	{ [         g,          G,          gbreve,          Gbreve ]	};
-    key <AC03>	{ [         x,          X, guillemotright,    greater ]	};
-    key <AC04>	{ [         j,          J ]	};
-    key <AC05>	{ [         f,          F,      dstroke,  ordfeminine ]	};
-    key <AC06>	{ [         k,          K,          kra,    ampersand ]	};
-    key <AC07>	{ [         q,          Q,           at,  Greek_OMEGA ]	};
-    key <AC08>	{ [         z,          Z,scedilla, Scedilla]	};
-    key <AC09>	{ [         v,          V, leftdoublequotemark, leftsinglequotemark ]	};
-
-    key <AB01>	{ [         a,          A,           adiaeresis,           Adiaeresis ]	};
-    key <AB02>	{ [         e, E, U20AC, U20AC ]	};
-    key <AB03>	{ [         d,          D,          eth,          ETH ]	};
-    key <AB04>	{ [         i,          I,   idotless,     U0130 ]	};
-    key <AB05>	{ [         o,          O,      odiaeresis, Odiaeresis]	};
-    key <AB06>	{ [         y,          Y,    leftarrow,          yen ]	};
-    key <AB07>	{ [         u,          U,    udiaeresis,      Udiaeresis ]	};
-
 };
