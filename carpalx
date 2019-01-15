@@ -52,7 +52,7 @@ xkb_symbols "qgmlwy" {
     key <AC01>	{ [         d,          D,          exclam,          backslash ]	};
     key <AC02>	{ [         s,          S,       ssharp,      ssharp ]	};
     key <AC03>	{ [         t,          T,       ampersand,       dollar  ]	};
-    key <AC04>	{ [         n,          N,       at,               hash   ]	};
+    key <AC04>	{ [         n,          N,       at,               U0023   ]	};
     key <AC05>	{ [         r,          R,    percent,   asterisk ]	};
     key <AC06>	{ [         i,          I,   idotless,     U0130 ]	};
     key <AC07>	{ [         a,          A,           adiaeresis,           Adiaeresis ]	};
