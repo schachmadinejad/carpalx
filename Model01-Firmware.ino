@@ -161,7 +161,7 @@ KEYMAPS(
                   Key_I, Key_A, Key_E,     Key_O,         Key_H, Key_Quote,
    Key_Escape,  Key_K, Key_P, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
    Key_RightGui, Key_RightShift, Key_Enter, Key_Delete,
-   Key_ShiftToLayer(FUNCTION)),
+   ShiftToLayer(FUNCTION)),
 
 #else
 
