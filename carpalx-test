@@ -41,8 +41,8 @@ xkb_symbols "basic" {
     key <AD01>	{ [         q,          Q,          trademark,              plusminus ]             };
     key <AC05>	{ [         g,          G,          gbreve,                 Gbreve ]                };
     key <AB07>	{ [         m,          M,          degree,                 degree ]                };
-    key <AC09>	{ [         l,          L,          leftsinglequotemark,    leftdoublequotemark ]	};
-    key <AD02>	{ [         w,          W,          rightsinglequotemark,   rightdoublequotemark ]	};
+    key <AC09>	{ [         l,          L,          leftsinglequotemark,    leftdoublequotemark ]   };
+    key <AD02>	{ [         w,          W,          rightsinglequotemark,   rightdoublequotemark ]  };
     key <AD06>	{ [         y,          Y,          y,                      Y ]                     };
     key <AC04>	{ [         f,          F,          braceleft,              braceright ]            };
     key <AD07>	{ [         u,          U,          udiaeresis,             Udiaeresis ]            };
